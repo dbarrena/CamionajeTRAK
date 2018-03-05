@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dbxprts.camionajetrak">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name=".GlobalVariables"
+        android:icon="@mipmap/navbar_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".VigilanciaPostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManiobrasPostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CalidadPostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VigilanciaNuevoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VigilanciaNuevoPostActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".LimpiezaPostActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

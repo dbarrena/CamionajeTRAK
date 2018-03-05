@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_vigilancia_nuevo_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="dbxprts.camionajetrak.VigilanciaNuevoPostActivity">
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/operador_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/OperadorTag"
+        android:layout_toRightOf="@+id/OperadorTag"
+        android:layout_toEndOf="@+id/OperadorTag"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp" />
+
+    <TextView
+        android:text="Operador:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/OperadorTag"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/cliente_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ClienteTag"
+        android:layout_alignLeft="@+id/operador_spinner"
+        android:layout_alignStart="@+id/operador_spinner" />
+
+    <TextView
+        android:text="Cliente:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:id="@+id/ClienteTag"
+        android:layout_below="@+id/operador_spinner"
+        android:layout_alignLeft="@+id/OperadorTag"
+        android:layout_alignStart="@+id/OperadorTag" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/producto_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ProductoTag"
+        android:layout_alignLeft="@+id/cliente_spinner"
+        android:layout_alignStart="@+id/cliente_spinner" />
+
+    <TextView
+        android:text="Producto:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:id="@+id/ProductoTag"
+        android:layout_below="@+id/cliente_spinner"
+        android:layout_toLeftOf="@+id/operador_spinner"
+        android:layout_toStartOf="@+id/operador_spinner" />
+
+    <Button
+        android:text="Nuevo Registro"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="67dp"
+        android:id="@+id/RegistroBtn"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:text="Placas:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PlacasTag"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/producto_spinner"
+        android:layout_alignRight="@+id/ClienteTag"
+        android:layout_alignEnd="@+id/ClienteTag" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Placas"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_alignBottom="@+id/PlacasTag"
+        android:layout_alignLeft="@+id/RegistroBtn"
+        android:layout_alignStart="@+id/RegistroBtn" />
+</RelativeLayout>

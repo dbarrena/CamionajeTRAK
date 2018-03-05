@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_limpieza_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="dbxprts.camionajetrak.LimpiezaPostActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Puertas bien selladas."
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/FirstQuestion"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1" />
+
+            <RadioGroup
+                android:id="@+id/FirstQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/FirstQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q1Y"
+                    android:checked="false"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q1N"
+                    android:checked="true" />
+
+            </RadioGroup>
+            <TextView
+                android:text="Paredes sin huecos."
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/SecondQuestion"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/FirstQuestionRadioGroup"/>
+
+            <RadioGroup
+                android:id="@+id/SecondQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/SecondQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q2Y"
+                    android:checked="true"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q2N"
+                    android:checked="true" />
+
+            </RadioGroup>
+            <TextView
+                android:text="Lona en buen estado."
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ThirdQuestion"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/SecondQuestionRadioGroup"/>
+
+            <RadioGroup
+                android:id="@+id/ThirdQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/ThirdQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q3Y"
+                    android:checked="true"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q3N"
+                    android:checked="true" />
+
+            </RadioGroup>
+            <TextView
+                android:text="Libre de goteras."
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/FourthQuestion"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/ThirdQuestionRadioGroup"/>
+
+            <RadioGroup
+                android:id="@+id/FourthQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/FourthQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q4Y"
+                    android:checked="true"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q4N"
+                    android:checked="true" />
+
+            </RadioGroup>
+            <TextView
+                android:text="Unidad limpia, sin manchas de aceite."
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/FifthQuestion"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/FourthQuestionRadioGroup"/>
+
+            <RadioGroup
+                android:id="@+id/FifthQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/FifthQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q5Y"
+                    android:checked="true"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q5N"
+                    android:checked="true" />
+
+            </RadioGroup>
+            <TextView
+                android:text="Unidad libre de plaga."
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/SixthQuestion"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/FifthQuestionRadioGroup"/>
+
+            <RadioGroup
+                android:id="@+id/SixthQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/SixthQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q6Y"
+                    android:checked="true"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q6N"
+                    android:checked="true" />
+
+            </RadioGroup>
+            <TextView
+                android:text="Pisos, paredes y techos limpios y secos."
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/SeventhQuestion"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/SixthQuestionRadioGroup"/>
+
+            <RadioGroup
+                android:id="@+id/SeventhQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/SeventhQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q7Y"
+                    android:checked="true"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q7N"
+                    android:checked="true" />
+
+            </RadioGroup>
+            <TextView
+                android:text="Unidad libre de olores extraños."
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/EighthQuestion"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/SeventhQuestionRadioGroup"/>
+
+            <RadioGroup
+                android:id="@+id/EighthQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/EighthQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q8Y"
+                    android:checked="true"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q8N"
+                    android:checked="true" />
+
+            </RadioGroup>
+            <TextView
+            android:text="Unidad libre de tornilos y partes metalicas slientes. "
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/NinthQuestion"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:layout_below="@+id/EighthQuestionRadioGroup"/>
+
+            <RadioGroup
+                android:id="@+id/NinthQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/NinthQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q9Y"
+                    android:checked="true"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q9N"
+                    android:checked="true" />
+
+            </RadioGroup>
+            <TextView
+                android:text="Unidad libre de pintura desprendiendose."
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TenthQuestion"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/NinthQuestionRadioGroup"/>
+
+            <RadioGroup
+                android:id="@+id/TenthQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/TenthQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q10Y"
+                    android:checked="true"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q10N"
+                    android:checked="true" />
+
+            </RadioGroup>
+            <TextView
+            android:text="Transporta exclusivamente este producto."
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/EleventhQuestion"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:layout_below="@+id/TenthQuestionRadioGroup"/>
+
+            <RadioGroup
+                android:id="@+id/EleventhQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/EleventhQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q11Y"
+                    android:checked="true"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q11N"
+                    android:checked="true" />
+
+            </RadioGroup>
+            <TextView
+                android:text="Puertas perfectamente ancladas después de la inspección."
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TwelfthQuestion"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/EleventhQuestionRadioGroup"/>
+
+            <RadioGroup
+                android:id="@+id/TwelfthQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/TwelfthQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q12Y"
+                    android:checked="true"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q12N"
+                    android:checked="true" />
+
+            </RadioGroup>
+            <TextView
+                android:text="Libera limpieza."
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ThirteenthQuestion"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="60dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/TwelfthQuestion"/>
+
+            <RadioGroup
+                android:id="@+id/ThirteenthQuestionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".07"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/ThirteenthQuestion"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:text="Si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q13Y"
+                    android:checked="true"
+                    android:paddingRight="10dp" />
+
+                <RadioButton
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q13N"
+                    android:checked="true" />
+
+            </RadioGroup>
+
+            <Button
+                android:text="Registro Limpieza"
+                android:layout_height="wrap_content"
+                android:id="@+id/registroLimpiezaBtn"
+                android:layout_below="@+id/HoraLimpiezaTag"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:layout_width="125dp" />
+
+            <TextView
+                android:text="Hora libera limpieza:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/HoraLimpiezaTag"
+                android:fontFamily="sans-serif"
+                android:textSize="15sp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/ThirteenthQuestionRadioGroup"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/HoraLimpieza"
+                android:text="ghfghfg"
+                android:layout_above="@+id/registroLimpiezaBtn"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="85dp"
+                android:layout_marginEnd="85dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

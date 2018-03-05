@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_maniobras_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="dbxprts.camionajetrak.ManiobrasPostActivity">
+
+    <TextView
+        android:text="Placa:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/PlacaTag"
+        android:textSize="14sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Producto"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_alignBottom="@+id/ProductoTag"
+        android:layout_alignLeft="@+id/Operador"
+        android:layout_alignStart="@+id/Operador" />
+
+    <Button
+        android:text="Inicio Maniobra"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/RegistroBtn"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_green_light"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="120dp" />
+
+    <TextView
+        android:text="Hora Inicio:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:id="@+id/HoraInicioTag"
+        android:layout_below="@+id/ZonaIndustriaTag"
+        android:layout_alignLeft="@+id/ClienteTag"
+        android:layout_alignStart="@+id/ClienteTag" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Placa"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/PlacaTag"
+        android:layout_alignBottom="@+id/PlacaTag"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Operador"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_alignTop="@+id/OperadorTag"
+        android:layout_alignLeft="@+id/Placa"
+        android:layout_alignStart="@+id/Placa" />
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/HoraInicio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:id="@+id/Cronometro" />
+
+    <TextView
+        android:text="Cliente:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:id="@+id/ClienteTag"
+        android:layout_below="@+id/ProductoTag"
+        android:layout_alignLeft="@+id/ProductoTag"
+        android:layout_alignStart="@+id/ProductoTag" />
+
+    <TextView
+        android:text="Operador:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:id="@+id/OperadorTag"
+        android:layout_below="@+id/Placa"
+        android:layout_alignLeft="@+id/PlacaTag"
+        android:layout_alignStart="@+id/PlacaTag" />
+
+    <TextView
+        android:text="Producto:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:id="@+id/ProductoTag"
+        android:layout_below="@+id/Operador"
+        android:layout_alignLeft="@+id/OperadorTag"
+        android:layout_alignStart="@+id/OperadorTag" />
+
+    <TextView
+        android:text="Zona Industria:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:id="@+id/ZonaIndustriaTag"
+        android:layout_below="@+id/ClienteTag"
+        android:layout_alignLeft="@+id/HoraInicioTag"
+        android:layout_alignStart="@+id/HoraInicioTag" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ClienteTag"
+        android:layout_alignLeft="@+id/Producto"
+        android:layout_alignStart="@+id/Producto"
+        android:id="@+id/Cliente"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <Spinner
+        android:id="@+id/ZonaIndustria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Cliente"
+        android:layout_alignStart="@+id/Cliente"
+        android:layout_alignTop="@+id/ZonaIndustriaTag"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/HoraInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ZonaIndustria"
+        android:layout_alignStart="@+id/ZonaIndustria"
+        android:layout_alignTop="@+id/HoraInicioTag"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/main_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/vigilancia"
+            android:icon="@drawable/police_icon"
+            android:title="Registro Vigilancia" />
+        <item
+            android:id="@+id/limpieza"
+            android:icon="@drawable/cleaning_icon"
+            android:title="Limpieza" />
+        <item
+            android:id="@+id/maniobras"
+            android:icon="@drawable/manouver_icon"
+            android:title="Maniobras" />
+        <item
+            android:id="@+id/calidad"
+            android:icon="@drawable/quality_icon"
+            android:title="Calidad" />
+    </group>
+    <group
+        android:id="@+id/secondary_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/onprocess"
+            android:title="En Proceso...">
+            <menu>
+                <item
+                    android:id="@+id/maniobrasOnProcess"
+                    android:icon="@mipmap/in_process"
+                    android:title="Maniobras (...)" />
+                <item
+                    android:id="@+id/calidadOnProcess"
+                    android:icon="@mipmap/in_process"
+                    android:title="Calidad (...)" />
+            </menu>
+        </item>
+    </group>
+</menu>
